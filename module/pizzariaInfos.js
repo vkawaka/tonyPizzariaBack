@@ -18,8 +18,8 @@ var produtosJSON = {
             foto: './pizza1.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
-                categorias[0],
-                categorias[3]
+                {idCat: 1, cat: categorias[0]},
+                {idCat: 4, cat: categorias[3]}
             ],
             favorito: true,
             avaliacao: 5,
@@ -53,8 +53,8 @@ var produtosJSON = {
             foto: './pizza2.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
-                categorias[0],
-                categorias[3],
+                {idCat: 1, cat: categorias[0]},
+                {idCat: 4, cat: categorias[3]}
             ],
             favorito: true,
             avaliacao: 4,
@@ -78,8 +78,8 @@ var produtosJSON = {
             foto: './pizza3.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
-                categorias[0],
-                categorias[3],
+                {idCat: 1, cat: categorias[0]},
+                {idCat: 4, cat: categorias[3]}
             ],
             favorito: true,
             avaliacao: 4,
@@ -103,8 +103,8 @@ var produtosJSON = {
             foto: './pizza4.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
-                categorias[0],
-                categorias[3],
+                {idCat: 1, cat: categorias[0]},
+                {idCat: 4, cat: categorias[3]}
             ],
             favorito: false,
             avaliacao: 4,
@@ -128,8 +128,8 @@ var produtosJSON = {
             foto: './pizza5.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
-                categorias[0],
-                categorias[3],
+                {idCat: 1, cat: categorias[0]},
+                {idCat: 4, cat: categorias[3]}
             ],
             favorito: true,
             avaliacao: 4,
@@ -153,9 +153,9 @@ var produtosJSON = {
             foto: './pizza6.png',
             descricao: 'Queijo Brie, Abrobrinha grelhada no azeite, alho in natura e parmesão para gratinar.',
             categoria: [
-                categorias[0],
-                categorias[2],
-                categorias[3]
+                {idCat: 1, cat: categorias[0]},
+                {idCat: 3, cat: categorias[2]},
+                {idCat: 4, cat: categorias[3]}
             ],
             favorito: false,
             avaliacao: 4,
@@ -179,9 +179,9 @@ var produtosJSON = {
             foto: './pizza7.png',
             descricao: 'muzzarela, alho poró, shimeji e sjitake refogado no shoyo, cream cheese, cubos de cebola.',
             categoria: [
-                categorias[0],
-                categorias[2],
-                categorias[3]
+                {idCat: 1, cat: categorias[0]},
+                {idCat: 3, cat: categorias[2]},
+                {idCat: 4, cat: categorias[3]}
             ],
             favorito: true,
             avaliacao: 4,
@@ -205,9 +205,9 @@ var produtosJSON = {
             foto: './pizza8.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
-                categorias[0],
-                categorias[4],
-                categorias[5]
+                {idCat: 1, cat: categorias[0]},
+                {idCat: 5, cat: categorias[4]},
+                {idCat: 6, cat: categorias[5]}
             ],
             favorito: false,
             avaliacao: 4,
@@ -279,11 +279,53 @@ var usuarioJSON = {
             localizacao: [
                 {
                     rua: 'Rua Perto de Algum Lugar',
+                    cidade: 'Moripora',
                     numero: '13',
                     bairro: 'Jardim Xurupita',
                     estado: 'RJ',
                     país: 'Brasil',
-                    cep: 7798000
+                    cep: 7798000,
+                    complemento: undefined
+                }
+            ]
+        },
+        {
+            id: 2,
+            nome: 'Choso Kamo',
+            email: 'bbchoso@email.com.br',
+            senha: 'lolol@l',
+            telefone: 118984263,
+            foto: './choso.png',
+            localizacao: [
+                {
+                    rua: 'Rua Kenjaku',
+                    cidade: 'Womb',
+                    numero: '9',
+                    bairro: 'Liberdade',
+                    estado: 'SP',
+                    país: 'Brasil',
+                    cep: 35974080,
+                    complemento: undefined
+                }
+            ]
+        },
+        {
+            id: 3,
+            nome: 'Soobin Choi',
+            email: 'soobinlindao@email.com.br',
+            senha: '04032019',
+            telefone: 118984264,
+            foto: './soobin.png',
+            localizacao: [
+                {
+                    rua: 'Av Antonio Bardella',
+                    cidade: 'Jandira',
+                    numero: '13',
+                    bairro: 'Jd. São Luiz',
+                    estado: 'SP',
+                    país: 'Brasil',
+                    cep: 16618000,
+                    complemento: "bloco K, apto 13"
                 }
             ]
         }

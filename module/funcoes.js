@@ -1,7 +1,8 @@
 var infos = require('./pizzariaInfos.JS')
 
-var categoria = infos.categorias
+var cat = infos.categorias
 var produtos = infos.produtosJSON
+var user = infos.usuarioJSON
 
 
 const mostrarPizza = (idProduto) => {
@@ -72,6 +73,32 @@ const getFavoritos = () => {
         return jsonT
         else
         return false   
+}
+
+const getCategoriasPizzas = (idCategoria) => {
+    const arrayPizza = produtos.pizzas
+    let arrayC = []
+    let status = false
+
+    arrayPizza.forEach(function (produto) {
+        produto.categoria.forEach(function (cate) {
+            if (cate.idCat === idCategoria) {
+                let jsonPizza = {
+                    foto: produto.foto,
+                    nome: produto.nome,
+                    valor: produto.preco,
+                }
+                arrayC.push(jsonPizza)
+                status = true
+            }
+        })
+    })
+
+    if (status) {
+        return {arrayC}
+    } else {
+        return false;
+    }
 }
 
 const mostrarBebida = (idProduto) => {
@@ -190,5 +217,45 @@ const mostrarDoces = () => {
         return false   
 }
 
-console.log(mostrarBebidas())
+const getUsuario = (id) => {
+    const arrayUsuario = user.usuario
+    let arrayC = []
+    let status = false
 
+    arrayUsuario.forEach(function(u){
+        let jsonUser = {}
+        let i = 0
+        if(u.id == id){
+            jsonUser.foto = u.foto
+            jsonUser.nome = u.nome
+            jsonUser.cidade = u.localizacao[i].cidade
+            jsonUser.telefone = u.telefone
+            jsonUser.email = u.email
+            jsonUser.localizacao = u.localizacao
+            arrayC.push(jsonUser)
+            status = true
+        }
+        i = i + 1
+    })
+    if(status)
+    return {arrayC}
+    else
+    return false  
+}
+
+console.log(getUsuario(3))
+
+module.exports={
+    mostrarPizza,
+    getFavoritos,
+    getCategoriasPizzas,
+    mostrarBebida,
+    mostrarBebidas,
+    mostrarDoce,
+    mostrarDoces,
+    getUsuario
+}
+
+// input:focus{
+//     outline-style: none;
+// }
