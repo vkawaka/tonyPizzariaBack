@@ -104,7 +104,7 @@ const mostrarBebida = (idProduto) => {
         return false   
 }
 
-const mostrarBebidas = (idProdutos) => {
+const mostrarBebidas = () => {
     const arrayBebida = produtos.bebidas
 
     let arrayC = []
@@ -132,4 +132,63 @@ const mostrarBebidas = (idProdutos) => {
         return false   
 }
 
-//console.log(mostrarPizza(3))
+const mostrarDoce = (idProdutos) => {
+    const arrayBebida = produtos.doces
+
+    let arrayC = []
+    let status = false
+   
+    arrayBebida.forEach(function(produto){
+           if(produto.id == idProdutos){
+            let jsonPizza = {}
+
+            jsonPizza.foto = produto.foto
+            jsonPizza.nome = produto.nome
+            jsonPizza.favorito = produto.favorito
+            jsonPizza.valor = produto.preco
+            jsonPizza.descricao = produto.descricao
+            jsonPizza.avl = produto.avaliacao
+                        
+            arrayC.push(jsonPizza)
+    
+            status = true
+           }
+        })
+    
+        let jsonT = {arrayC}
+        if(status)
+        return jsonT
+        else
+        return false   
+}
+
+const mostrarDoces = () => {
+    const arrayBebida = produtos.doces
+
+    let arrayC = []
+    let status = false
+   
+    arrayBebida.forEach(function(produto){
+            let jsonPizza = {}
+
+            jsonPizza.foto = produto.foto
+            jsonPizza.nome = produto.nome
+            jsonPizza.favorito = produto.favorito
+            jsonPizza.valor = produto.preco
+            jsonPizza.descricao = produto.descricao
+            jsonPizza.avl = produto.avaliacao
+                        
+            arrayC.push(jsonPizza)
+    
+            status = true
+        })
+    
+        let jsonT = {arrayC}
+        if(status)
+        return jsonT
+        else
+        return false   
+}
+
+console.log(mostrarBebidas())
+
