@@ -98,6 +98,8 @@ const getFavoritos = () => {
 }
 
 const getCategorias = (idCategoria) => {
+
+    console.log(idCategoria)
     const arrayPizza = produtos.pizzas
     const arrayBebidas = produtos.bebidas
     const arrayDoces = produtos.doces
@@ -106,7 +108,8 @@ const getCategorias = (idCategoria) => {
 
     arrayPizza.forEach(function (produto) {
         produto.categoria.forEach(function (cate) {
-            if (cate.idCat === idCategoria) {
+            console.log(cate.idCat)
+            if (cate.idCat === Number(idCategoria)) {
                 let jsonPizza = {
                     foto: produto.foto,
                     nome: produto.nome,
@@ -119,7 +122,7 @@ const getCategorias = (idCategoria) => {
     })
     arrayBebidas.forEach(function (produto) {
         produto.categoria.forEach(function (cate) {
-            if (cate.idCat === idCategoria) {
+            if (cate.idCat === Number(idCategoria)) {
                 let jsonBebidas = {
                     foto: produto.foto,
                     nome: produto.nome,
@@ -132,7 +135,7 @@ const getCategorias = (idCategoria) => {
     })
     arrayDoces.forEach(function (produto) {
         produto.categoria.forEach(function (cate) {
-            if (cate.idCat === idCategoria) {
+            if (cate.idCat === Number(idCategoria)) {
                 let jsonDoces = {
                     foto: produto.foto,
                     nome: produto.nome,
@@ -151,7 +154,7 @@ const getCategorias = (idCategoria) => {
     }
 }
 
-console.log(getCategorias(6))
+// console.log(getCategorias(6))
 
 const mostrarBebida = (idProduto) => {
     const arrayBebida = produtos.bebidas
@@ -194,10 +197,7 @@ const mostrarBebidas = () => {
 
             jsonPizza.foto = produto.foto
             jsonPizza.nome = produto.nome
-            jsonPizza.favorito = produto.favorito
             jsonPizza.valor = produto.preco
-            jsonPizza.descricao = produto.descricao
-            jsonPizza.avl = produto.avaliacao
                         
             arrayC.push(jsonPizza)
     
@@ -252,9 +252,7 @@ const mostrarDoces = () => {
 
             jsonPizza.foto = produto.foto
             jsonPizza.nome = produto.nome
-            jsonPizza.favorito = produto.favorito
             jsonPizza.valor = produto.preco
-            jsonPizza.descricao = produto.descricao
             jsonPizza.avl = produto.avaliacao
                         
             arrayC.push(jsonPizza)

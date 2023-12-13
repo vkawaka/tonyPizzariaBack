@@ -26,7 +26,7 @@ app.use((request, response, next) =>{
 })
 
 //Configurar a forma que o endpoint será acionado. Assinatura do EndPoint
-//retorna as informações de um produto em específico, de acordo com o id dele
+//retorna as informações de uma pizza em específico, de acordo com o id dele
 app.get('/produtos/pizza', cors(), async function(request, response, next){
     let idProduto = request.query.idProduto
     let controlePizzaria = require('./module/funcoes.js')
@@ -53,14 +53,82 @@ app.get('/produtos/favoritos', cors(), async function(request, response, next){
     }
 })
 
-//retorna todos os produtos de uma categoria específica, filtrando pelo id da categoria
-app.get('/categoria/produtos', cors(), async function(request, response, next){
+//mostra as informações de uma bebida
+app.get('/produtos/bebida', cors(), async function(request, response, next){
     let idProduto = request.query.idProduto
     let controlePizzaria = require('./module/funcoes.js')
-    let produtoPizza = controlePizzaria.getCategorias(idProduto)
+    let produtoBebida = controlePizzaria.mostrarBebida(idProduto)
 
-    if(produtoPizza){
-        response.json(produtoPizza)
+    if(produtoBebida){
+        response.json(produtoBebida)
+        response.status(200)
+    }else{
+        response.status(404)
+    }
+})
+
+//mostra todas as bebidas
+app.get('/produtos/bebidas', cors(), async function(request, response, next){
+    let controlePizzaria = require('./module/funcoes.js')
+    let produtosBebidas = controlePizzaria.mostrarBebidas()
+
+    if(produtosBebidas){
+        response.json(produtosBebidas)
+        response.status(200)
+    }else{
+        response.status(404)
+    }
+})
+
+//mostra as informações de um doce
+app.get('/produtos/doce', cors(), async function(request, response, next){
+    let idProduto = request.query.idProduto
+    let controlePizzaria = require('./module/funcoes.js')
+    let produtoDoce = controlePizzaria.mostrarDoce(idProduto)
+
+    if(produtoDoce){
+        response.json(produtoDoce)
+        response.status(200)
+    }else{
+        response.status(404)
+    }
+})
+
+//mostra todas os doces
+app.get('/produtos/doces', cors(), async function(request, response, next){
+    let controlePizzaria = require('./module/funcoes.js')
+    let produtosDoces = controlePizzaria.mostrarDoces()
+
+    if(produtosDoces){
+        response.json(produtosDoces)
+        response.status(200)
+    }else{
+        response.status(404)
+    }
+})
+
+app.get('/usuario', cors(), async function(request, response, next){
+    let idUsuario = request.query.id
+    let controlePizzaria = require('./module/funcoes.js')
+    let usuario = controlePizzaria.getUsuario(idUsuario)
+
+    if(usuario){
+        response.json(usuario)
+        response.status(200)
+    }else{
+        response.status(404)
+    }
+})
+
+app.get('/categoria/produtos', cors(), async function(request, response, next){
+    let idCategorias = request.query.id
+    let controlePizzaria = require('./module/funcoes.js')
+    let categoriaProdutos = controlePizzaria.getCategorias(idCategorias)
+
+    console.log(categoriaProdutos)
+
+    if(categoriaProdutos){
+        response.json(categoriaProdutos)
         response.status(200)
     }else{
         response.status(404)
@@ -71,10 +139,3 @@ app.get('/categoria/produtos', cors(), async function(request, response, next){
 app.listen('8080', function(){
     console.log('roda')
 })
-
-// getcategoriaspizzas
-// mostrarbebida
-// mostrarbebida
-// mostrardoce
-// mostratdoces
-// getusuario
