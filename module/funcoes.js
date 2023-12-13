@@ -293,6 +293,24 @@ const getUsuario = (id) => {
     return false  
 }
 
+const login = (usuario) => {
+    const arrayUsuario = user.usuario
+    let status = false
+    let p
+    
+    arrayUsuario.forEach(user => {
+        if(user.email == usuario.email && user.senha == usuario.senha){
+            status = true
+            p = user
+        }       
+    })
+
+    if(status)
+    return {p}
+    else
+    false
+}
+
 module.exports={
     mostrarPizza,
     getFavoritos,
@@ -301,5 +319,6 @@ module.exports={
     mostrarBebidas,
     mostrarDoce,
     mostrarDoces,
-    getUsuario
+    getUsuario,
+    login
 }

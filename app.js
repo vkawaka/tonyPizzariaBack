@@ -135,6 +135,19 @@ app.get('/categoria/produtos', cors(), async function(request, response, next){
     }
 })
 
+app.post('/usuario/login', cors(), async function(request, response, next){
+    let controlePizzaria = require('./module/funcoes.js')
+    let usuario = controlePizzaria.login(request.body)
+
+
+    if(usuario){
+        response.json(usuario)
+        response.status(200)
+    }else{
+        response.status(404)
+    }
+})
+
 
 app.listen('8080', function(){
     console.log('roda')
