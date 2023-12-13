@@ -15,7 +15,7 @@ var produtosJSON = {
             id: 1,
             nome: 'Pizza de peperoni com queijo.',
             preco: '19.00',
-            foto: './pizza1.png',
+            foto: './pizzaPeperonicomQueijo.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -50,7 +50,7 @@ var produtosJSON = {
             id: 2,
             nome: 'Pizza de calabresa com queijo.',
             preco: '16.00',
-            foto: './pizza2.png',
+            foto: './pizzaCalabresacomQueijo.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -75,7 +75,7 @@ var produtosJSON = {
             id: 3,
             nome: 'Pizza de frango com catupiry.',
             preco: '17.00',
-            foto: './pizza3.png',
+            foto: './pizzaFrangocomCatupiry.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -100,7 +100,7 @@ var produtosJSON = {
             id: 4,
             nome: 'Pizza de peperoni com queijo e tomate.',
             preco: '16.00',
-            foto: './pizza4.png',
+            foto: './pizzaQueijoTomate.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
