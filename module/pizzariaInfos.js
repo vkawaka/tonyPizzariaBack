@@ -229,11 +229,11 @@ var produtosJSON = {
         {
             id: 1,
             nome: 'coca-cola 2L',
-            preco: '14.99',
+            preco: '16.99',
             foto: './cocacola.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
-                categorias[1]
+                {idCat: 2, cat: categorias[1]}
             ],
             favorito: false,
             avaliacao: 4
@@ -245,10 +245,34 @@ var produtosJSON = {
             foto: './heineken.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
-                categorias[1]
+                {idCat: 2, cat: categorias[1]}
             ],
             favorito: false,
             avaliacao: 4
+        },
+        {
+            id: 3,
+            nome: 'guaraná 2L',
+            preco: '14.99',
+            foto: './guarana.png',
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            categoria: [
+                {idCat: 2, cat: categorias[1]}
+            ],
+            favorito: false,
+            avaliacao: 4
+        },
+        {
+            id: 4,
+            nome: 'itubaína',
+            preco: '13.99',
+            foto: './itubaina.png',
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            categoria: [
+                {idCat: 2, cat: categorias[1]}
+            ],
+            favorito: true,
+            avaliacao: 5
         }
     ],
     doces:[
@@ -259,10 +283,34 @@ var produtosJSON = {
             foto: './cheesecake.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
-                categorias[5]
+                {idCat: 6, cat: categorias[5]}
             ],
             favorito: false,
             avaliacao: 5
+        },
+        {
+            id: 2,
+            nome: 'pudim',
+            preco: '22.50',
+            foto: './pudim.png',
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            categoria: [
+                {idCat: 6, cat: categorias[5]}
+            ],
+            favorito: true,
+            avaliacao: 5
+        },
+        {
+            id: 3,
+            nome: 'mousse de limão',
+            preco: '19.80',
+            foto: './mousse.png',
+            descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            categoria: [
+                {idCat: 6, cat: categorias[5]}
+            ],
+            favorito: false,
+            avaliacao: 4
         }
     ]
 }

@@ -25,11 +25,9 @@ app.use((request, response, next) =>{
     next()
 })
 
-//EndPoints: pontos de paradas (como nossa API escuta os métodos)
-
 //Configurar a forma que o endpoint será acionado. Assinatura do EndPoint
-//Retorna a listade todos os estados.
-app.get('/produto/pizza', cors(), async function(request, response, next){
+//retorna as informações de um produto em específico, de acordo com o id dele
+app.get('/produtos/pizza', cors(), async function(request, response, next){
     let idProduto = request.query.idProduto
     let controlePizzaria = require('./module/funcoes.js')
     let produtoPizza = controlePizzaria.mostrarPizza(idProduto)
@@ -42,12 +40,38 @@ app.get('/produto/pizza', cors(), async function(request, response, next){
     }
 })
 
+//traz a lista de produtos favoritos
+app.get('/produtos/favoritos', cors(), async function(request, response, next){
+    let controlePizzaria = require('./module/funcoes.js')
+    let produtosFavoritos = controlePizzaria.getFavoritos()
+
+    if(produtosFavoritos){
+        response.json(produtosFavoritos)
+        response.status(200)
+    }else{
+        response.status(404)
+    }
+})
+
+//retorna todos os produtos de uma categoria específica, filtrando pelo id da categoria
+app.get('/categoria/produtos', cors(), async function(request, response, next){
+    let idProduto = request.query.idProduto
+    let controlePizzaria = require('./module/funcoes.js')
+    let produtoPizza = controlePizzaria.getCategorias(idProduto)
+
+    if(produtoPizza){
+        response.json(produtoPizza)
+        response.status(200)
+    }else{
+        response.status(404)
+    }
+})
+
+
 app.listen('8080', function(){
     console.log('roda')
 })
 
-// mostrarpizza
-// getfavoritos
 // getcategoriaspizzas
 // mostrarbebida
 // mostrarbebida

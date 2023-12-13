@@ -56,6 +56,8 @@ const mostrarPizza = (idProduto) => {
 
 const getFavoritos = () => {
     const arrayPizza = produtos.pizzas
+    const arrayBebidas = produtos.bebidas
+    const arrayDoces = produtos.doces
     let arrayC = []
     let status = false
     arrayPizza.forEach(function(produto){
@@ -67,7 +69,27 @@ const getFavoritos = () => {
             arrayC.push(jsonPizza)
             status = true
         }
-        })
+    })
+    arrayBebidas.forEach(function(produto){
+        if(produto.favorito == true){
+            let jsonBebidas = {}
+            jsonBebidas.foto = produto.foto
+            jsonBebidas.nome = produto.nome
+            jsonBebidas.valor = produto.preco
+            arrayC.push(jsonBebidas)
+            status = true
+        }
+    })
+    arrayDoces.forEach(function(produto){
+        if(produto.favorito == true){
+            let jsonDoces= {}
+            jsonDoces.foto = produto.foto
+            jsonDoces.nome = produto.nome
+            jsonDoces.valor = produto.preco
+            arrayC.push(jsonDoces)
+            status = true
+        }
+    })
         let jsonT = {arrayC}
         if(status)
         return jsonT
@@ -75,8 +97,10 @@ const getFavoritos = () => {
         return false   
 }
 
-const getCategoriasPizzas = (idCategoria) => {
+const getCategorias = (idCategoria) => {
     const arrayPizza = produtos.pizzas
+    const arrayBebidas = produtos.bebidas
+    const arrayDoces = produtos.doces
     let arrayC = []
     let status = false
 
@@ -93,6 +117,32 @@ const getCategoriasPizzas = (idCategoria) => {
             }
         })
     })
+    arrayBebidas.forEach(function (produto) {
+        produto.categoria.forEach(function (cate) {
+            if (cate.idCat === idCategoria) {
+                let jsonBebidas = {
+                    foto: produto.foto,
+                    nome: produto.nome,
+                    valor: produto.preco,
+                }
+                arrayC.push(jsonBebidas)
+                status = true
+            }
+        })
+    })
+    arrayDoces.forEach(function (produto) {
+        produto.categoria.forEach(function (cate) {
+            if (cate.idCat === idCategoria) {
+                let jsonDoces = {
+                    foto: produto.foto,
+                    nome: produto.nome,
+                    valor: produto.preco,
+                }
+                arrayC.push(jsonDoces)
+                status = true
+            }
+        })
+    })
 
     if (status) {
         return {arrayC}
@@ -100,6 +150,8 @@ const getCategoriasPizzas = (idCategoria) => {
         return false;
     }
 }
+
+console.log(getCategorias(6))
 
 const mostrarBebida = (idProduto) => {
     const arrayBebida = produtos.bebidas
@@ -243,19 +295,13 @@ const getUsuario = (id) => {
     return false  
 }
 
-console.log(getUsuario(3))
-
 module.exports={
     mostrarPizza,
     getFavoritos,
-    getCategoriasPizzas,
+    getCategorias,
     mostrarBebida,
     mostrarBebidas,
     mostrarDoce,
     mostrarDoces,
     getUsuario
 }
-
-// input:focus{
-//     outline-style: none;
-// }
