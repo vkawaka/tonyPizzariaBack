@@ -211,6 +211,31 @@ const mostrarBebidas = () => {
         return false   
 }
 
+const mostrarPizzas = () => {
+    const arrayPizza = produtos.pizzas
+
+    let arrayC = []
+    let status = false
+   
+    arrayPizza.forEach(function(produto){
+            let jsonPizza = {}
+
+            jsonPizza.foto = produto.foto
+            jsonPizza.nome = produto.nome
+            jsonPizza.valor = produto.preco
+                        
+            arrayC.push(jsonPizza)
+    
+            status = true
+        })
+    
+        let jsonT = {arrayC}
+        if(status)
+        return jsonT
+        else
+        return false   
+}
+
 const mostrarDoce = (idProdutos) => {
     const arrayBebida = produtos.doces
 
@@ -313,6 +338,7 @@ const login = (usuario) => {
 
 module.exports={
     mostrarPizza,
+    mostrarPizzas,
     getFavoritos,
     getCategorias,
     mostrarBebida,

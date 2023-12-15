@@ -1,11 +1,11 @@
 var categorias = {
     categorias: [
-        {id: 1, nome: 'Pizzas', descricao: 'Todas as pizzas', foto: './logo.png'},
-        {id: 2, nome: 'Bebidas', descricao: 'Todas as bebidas', foto: './bebidas.png'},
-        {id: 3, nome: 'Vegetarianas', descricao: 'Pizzas veganas', foto: './melancia.png'},
-        {id: 4, nome: 'Pizzas Salgadas', descricao: 'Todas as pizzas salgadas', foto: './pizza-logo.png'},
-        {id: 5, nome: 'Pizzas Doces', descricao: 'Todas as pizzas doces', foto: './sorteve.png'},
-        {id: 6, nome: 'Sobremesas', descricao: 'Sobremesas', foto: './sorvete-fofo.png'},
+        {id: 1, nome: 'Pizzas', descricao: 'Todas as pizzas', foto: '../img/logo.png'},
+        {id: 2, nome: 'Bebidas', descricao: 'Todas as bebidas', foto: '../img/bebidas.png'},
+        {id: 3, nome: 'Vegetarianas', descricao: 'Pizzas veganas', foto: '../img/melancia.png'},
+        {id: 4, nome: 'Pizzas Salgadas', descricao: 'Todas as pizzas salgadas', foto: '../img/pizza-logo.png'},
+        {id: 5, nome: 'Pizzas Doces', descricao: 'Todas as pizzas doces', foto: '../img/sorteve.png'},
+        {id: 6, nome: 'Sobremesas', descricao: 'Sobremesas', foto: '../img/sorvete-fofo.png'},
 
     ],
 }
@@ -15,7 +15,7 @@ var produtosJSON = {
             id: 1,
             nome: 'Pizza de peperoni com queijo.',
             preco: '19.00',
-            foto: './pizzaPeperonicomQueijo.png',
+            foto: '../img/pizzaPeperonicomQueijo.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -26,7 +26,7 @@ var produtosJSON = {
             comentarios: [
                 {
                     usuario: {
-                        foto_usuario: './maria.png',
+                        foto_usuario: '../img/maria.png',
                         nome: 'Maria da Silva',
                     },
                     data: '15/03/2022',
@@ -36,7 +36,7 @@ var produtosJSON = {
                 },
                 {
                     usuario: {
-                        foto_usuario: './pedro.png',
+                        foto_usuario: '../img/pedro.png',
                         nome: 'Pedro Gomes Dias',
                     },
                     data: '21/05/2022',
@@ -50,7 +50,7 @@ var produtosJSON = {
             id: 2,
             nome: 'Pizza de calabresa com queijo.',
             preco: '16.00',
-            foto: './pizzaCalabresacomQueijo.png',
+            foto: '../img/pizzaCalabresacomQueijo.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -61,7 +61,7 @@ var produtosJSON = {
             comentarios: [
                 {
                     usuario: {
-                        foto_usuario: './soobin.png',
+                        foto_usuario: '../img/soobin.png',
                         nome: 'Soobin Choi',
                     },
                     data: '05/12/2022',
@@ -75,7 +75,7 @@ var produtosJSON = {
             id: 3,
             nome: 'Pizza de frango com catupiry.',
             preco: '17.00',
-            foto: './pizzaFrangocomCatupiry.png',
+            foto: '../img/pizzaFrangocomCatupiry.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -86,7 +86,7 @@ var produtosJSON = {
             comentarios: [
                 {
                     usuario: {
-                        foto_usuario: './beomgyu.png',
+                        foto_usuario: '../img/beomgyu.png',
                         nome: 'Beomgyu Choi',
                     },
                     data: '13/03/2023',
@@ -100,7 +100,7 @@ var produtosJSON = {
             id: 4,
             nome: 'Pizza de peperoni com queijo e tomate.',
             preco: '16.00',
-            foto: './pizzaQueijoTomate.png',
+            foto: '../img/pizzaQueijoTomate.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -111,7 +111,7 @@ var produtosJSON = {
             comentarios: [
                 {
                     usuario: {
-                        foto_usuario: './yeonjun.png',
+                        foto_usuario: '../img/yeonjun.png',
                         nome: 'Yeonjun Choi',
                     },
                     data: '13/09/2023',
@@ -125,7 +125,7 @@ var produtosJSON = {
             id: 5,
             nome: 'Pizza brotinho com queijo e tomate.',
             preco: '12.00',
-            foto: './pizza5.png',
+            foto: '../img/pizzaBrotinho.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -136,7 +136,7 @@ var produtosJSON = {
             comentarios: [
                 {
                     usuario: {
-                        foto_usuario: './taehyun.png',
+                        foto_usuario: '../img/taehyun.png',
                         nome: 'Taehyun Kang',
                     },
                     data: '05/02/2022',
@@ -150,7 +150,7 @@ var produtosJSON = {
             id: 6,
             nome: 'Pizza de abobrinha com brie',
             preco: '30.00',
-            foto: './pizza6.png',
+            foto: '../img/pizzaAbobrinha.png',
             descricao: 'Queijo Brie, Abrobrinha grelhada no azeite, alho in natura e parmesão para gratinar.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -162,7 +162,7 @@ var produtosJSON = {
             comentarios: [
                 {
                     usuario: {
-                        foto_usuario: './kai.png',
+                        foto_usuario: '../img/kai.png',
                         nome: 'Kai Huening Kamal',
                     },
                     data: '14/08/2022',
@@ -176,7 +176,7 @@ var produtosJSON = {
             id: 7,
             nome: 'oriental',
             preco: '30.00',
-            foto: './pizza7.png',
+            foto: '../img/pizzaOriental.png',
             descricao: 'muzzarela, alho poró, shimeji e sjitake refogado no shoyo, cream cheese, cubos de cebola.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -188,7 +188,7 @@ var produtosJSON = {
             comentarios: [
                 {
                     usuario: {
-                        foto_usuario: './taehyun.png',
+                        foto_usuario: '../img/taehyun.png',
                         nome: 'Taehyun Kang',
                     },
                     data: '05/02/2022',
@@ -202,7 +202,7 @@ var produtosJSON = {
             id: 8,
             nome: 'Pizza chocolate com morango',
             preco: '12.00',
-            foto: './pizza8.png',
+            foto: './pizzaChocolate.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 1, cat: categorias[0]},
@@ -214,7 +214,7 @@ var produtosJSON = {
             comentarios: [
                 {
                     usuario: {
-                        foto_usuario: './taehyun.png',
+                        foto_usuario: '../img/taehyun.png',
                         nome: 'Taehyun Kang',
                     },
                     data: '05/02/2022',
@@ -230,7 +230,7 @@ var produtosJSON = {
             id: 1,
             nome: 'coca-cola 2L',
             preco: '16.99',
-            foto: './cocacola.png',
+            foto: '../img/cocacola.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 2, cat: categorias[1]}
@@ -242,7 +242,7 @@ var produtosJSON = {
             id: 2,
             nome: 'cerveja heineken',
             preco: '17.99',
-            foto: './heineken.png',
+            foto: '../img/heineken.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 2, cat: categorias[1]}
@@ -254,7 +254,7 @@ var produtosJSON = {
             id: 3,
             nome: 'guaraná 2L',
             preco: '14.99',
-            foto: './guarana.png',
+            foto: '../img/guarana.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 2, cat: categorias[1]}
@@ -266,7 +266,7 @@ var produtosJSON = {
             id: 4,
             nome: 'itubaína',
             preco: '13.99',
-            foto: './itubaina.png',
+            foto: '../img/itubaina.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 2, cat: categorias[1]}
@@ -280,7 +280,7 @@ var produtosJSON = {
             id: 1,
             nome: 'chessecake',
             preco: '28.99',
-            foto: './cheesecake.png',
+            foto: '../img/cheesecake.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 6, cat: categorias[5]}
@@ -292,7 +292,7 @@ var produtosJSON = {
             id: 2,
             nome: 'pudim',
             preco: '22.50',
-            foto: './pudim.png',
+            foto: '../img/pudim.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 6, cat: categorias[5]}
@@ -304,7 +304,7 @@ var produtosJSON = {
             id: 3,
             nome: 'mousse de limão',
             preco: '19.80',
-            foto: './mousse.png',
+            foto: '../img/mousse.png',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             categoria: [
                 {idCat: 6, cat: categorias[5]}
@@ -323,7 +323,7 @@ var usuarioJSON = {
             email: 'fulano.silva@email.com.br',
             senha: 'senhaQualquer',
             telefone: 11955555555,
-            foto: './fulano.png',
+            foto: '../img/fulano.png',
             localizacao: [
                 {
                     rua: 'Rua Perto de Algum Lugar',
@@ -343,7 +343,7 @@ var usuarioJSON = {
             email: 'bbchoso@email.com.br',
             senha: 'lolol@l',
             telefone: 118984263,
-            foto: './choso.png',
+            foto: '../img/choso.png',
             localizacao: [
                 {
                     rua: 'Rua Kenjaku',
@@ -363,7 +363,7 @@ var usuarioJSON = {
             email: 'soobinlindao@email.com.br',
             senha: '04032019',
             telefone: 118984264,
-            foto: './soobin.png',
+            foto: '../img/soobin.png',
             localizacao: [
                 {
                     rua: 'Av Antonio Bardella',

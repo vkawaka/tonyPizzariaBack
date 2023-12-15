@@ -26,6 +26,7 @@ app.use((request, response, next) =>{
 })
 
 //Configurar a forma que o endpoint será acionado. Assinatura do EndPoint
+
 //retorna as informações de uma pizza em específico, de acordo com o id dele
 app.get('/produtos/pizza', cors(), async function(request, response, next){
     let idProduto = request.query.idProduto
@@ -71,6 +72,19 @@ app.get('/produtos/bebida', cors(), async function(request, response, next){
 app.get('/produtos/bebidas', cors(), async function(request, response, next){
     let controlePizzaria = require('./module/funcoes.js')
     let produtosBebidas = controlePizzaria.mostrarBebidas()
+
+    if(produtosBebidas){
+        response.json(produtosBebidas)
+        response.status(200)
+    }else{
+        response.status(404)
+    }
+})
+
+//mostra todas as pizzas
+app.get('/produtos/pizzas', cors(), async function(request, response, next){
+    let controlePizzaria = require('./module/funcoes.js')
+    let produtosBebidas = controlePizzaria.mostrarPizzas()
 
     if(produtosBebidas){
         response.json(produtosBebidas)
